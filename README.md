@@ -1,36 +1,21 @@
 # Teste Técnico Getrak - Analista Desenvolvedor
 
-# Dados
+#Tecnologias utilizadas
 
-Para implementação da funcionalidade deverá ser utilizada a API  https://swapi.co/
+Para o desenvolvimento do teste, foi utilizado as seguintes linguagens:
 
-# Funcionalidade
+Javascript (Vanilla),
+HTML5, CSS3 (Bootstrap) e Jquery (Por causa do bootstrap :-)
 
-Calcular quantas paradas serão necessárias para percorrer uma dada distância, com cada uma das espaçonaves listadas em https://swapi.co/
+Para consumo da API, foi utilizado o AXIOS (https://github.com/axios/axios)
+Também foi utilizado alguns plug-ins para geração da tabela (https://datatables.net/) e também de validação de campos (http://1000hz.github.io/bootstrap-validator/)
+ 
 
-# Critérios de aceitação
+# Cálculo
 
-A aplicação receberá como parâmetro a distância a ser percorrida, em mega lights (MGLT);
-A solução implementada não deve assumir que os dados sobre as aeronaves são estáticos;
-Como resultado do processamento deverá ser exibida uma lista com todas as espaçonaves e a quantidade de paradas exigidas por cada uma delas para percorrer a distância informada;
-Exemplo: Para percorrer a distância de 1000000 (um milhão) de mega lights o resultado correto será:
-Millennium Falcon: 9
-Y-wing: 74
-...
-Rebel Transport: 11
-...
-Quaisquer outros detalhes da aplicação - tais como apresentação, interação e formatação - ficam a critério do desenvolvedor.
+Para o cálculo do número de paradas, realizei a divisão da distância pelo custo em créditos, que foi o que gerou o resultado mais próximo do exemplo proposto.
 
-# Critérios de avaliação
 
-Funcionalidade: atender todos os critérios de aceitação mencionados;
-Organização do projeto: diretórios, arquivos, classes, ...;
-Legibilidade do código;
-Adoção de boas práticas de desenvolvimento de software;
-Documentação: instruções para execução e uso da aplicação, com comunicação objetiva;
-Criatividade: O escopo deste teste é bem aberto, do ponto de vista de requisitos técnicos, propositalmente, para que você possa demonstrar sua criatividade. :)
+# Orientações de uso
 
-# Considerações finais
-
-Acreditamos que o teste acima possa ser concluído em menos de 4 horas;
-Poderá ser utilizada qualquer linguagem de programação, à escolha do candidato;
+Basta digitar a distância e clicar em "Calcular". Feito isso, será exibido na tabela as informações.

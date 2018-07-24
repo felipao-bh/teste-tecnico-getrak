@@ -4,7 +4,6 @@ $(function () {
 
         if (e.isDefaultPrevented()) {
 
-            console.log(false);
             return false;
         }
 
@@ -13,7 +12,6 @@ $(function () {
             if (!e.preventDefault()) {
 
                 let distance = document.getElementById('distancia').value;
-                console.log(distance);
 
                 axios('https://swapi.co/api/starships/', {
                     method: 'get',
