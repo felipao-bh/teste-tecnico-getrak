@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Stop Calculator</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="/teste/getrak/styles/styles.css">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+    <!-- Folhas de estilo -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Axios - Promise based HTTP client for the browser and node.js -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Classe de comunicação - SWAPI -->
+    <script src="/teste/getrak/js/api.js"></script>
+
+    <!-- Validador -->
+    <script src="/teste/getrak/js/validator/validator.js"></script>
+
+    <!-- Datatable -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.js"></script>
+    <script src="/teste/getrak/js/dataTable.js"></script>
+
+
+</head>
+<body>
+    <form id="form-stop-calculator" data-toggle="validator" role="form">
+        <div class="container">
+            <h1>Teste Técnico Getrak - Analista Desenvolvedor</h1>
+            <div class="separador"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="distancia">Digite a distância em MGLT (Somente números)*</label>
+                        <div class="input-group">
+                            <input type="text" id="distancia" onkeyup="onlyNumbers(this)" class="form-control" placeholder="Distância" aria-describedby="basic-addon1" required="required" data-error="Distância é um campo obrigatório.">
+                        </div>
+                        <div class="help-block with-errors"></div>
+
+                        <div class="form-group">
+                            <button type="submit" id="enviar" class="btn btn-success btn-md has-spinner">Calcular</button>
+                        </div>
+
+                        <p class="text-muted">Os campos marcados com <strong>*</strong> são obrigatórios.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="separador"></div>
+        </div>
+    </form>
+
+
+    <div class="container">
+        <table class="table row-border" id="result-table" >
+            <thead>
+            <tr>
+                <td>Nome</td>
+                <td>MGLT</td>
+                <td>Custo em créditos</td>
+                <td>Qtd. De paradas</td>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script>
+
+    </script>
+
+
+
+</body>
+</html>
